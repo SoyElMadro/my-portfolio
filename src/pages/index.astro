@@ -1,18 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 import Badge from "../components/Badge.astro";
 import SocialPill from "../components/SocialPill.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
+import Learning from "../components/Learning.astro";
+import LevelUpIcon from "../components/icons/LevelUp.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 ---
 
-<Layout 
+<Layout
   title="Portfolio de Madro - Programador y Desarrollador Web & Java Developer"
+  description="Soy Madro, un Programador y Desarrollador Web y Java. Explora mi Portfolio para descubrir proyectos web y desarrollos Java que destacan por su creatividad y funcionalidad. ¡Trabajemos juntos para llevar tu visión digital al siguiente nivel!"
 >
-  <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-20">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
         Hey, soy Madro <a
           href="https://www.linkedin.com/in/gonzalo-madro%C3%B1al-136312269/"
           target="_blank"
@@ -22,8 +30,8 @@ import MailIcon from "../components/icons/Mail.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl opacity-80 text-wrap">
-        <span>+2 años de experiencia.</span>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+        <span>+2 años de aprendizaje.</span>
         <span class="text-yellow-200/90"
           >Desarrollador web y Desarrollador Java</span
         >. <span class="text-sky-300">De Buenos Aires, Argentina</span> 🇦🇷. <span
@@ -32,26 +40,42 @@ import MailIcon from "../components/icons/Mail.astro";
         >
       </h2>
 
-      <nav class="flex gap-x-4 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill
           href="https://www.linkedin.com/in/gonzalo-madro%C3%B1al-136312269/"
         >
-          <LinkedInIcon class="size-6" />
+          <LinkedInIcon class="size-4 md:size-6" />
            LinkedIn
         </SocialPill>
-        <SocialPill
-          href="https://github.com/SoyElMadro"
-        >
-          <GitHubIcon class="size-6" />
+        <SocialPill href="https://github.com/SoyElMadro">
+          <GitHubIcon class="size-4 md:size-6" />
            GitHub
         </SocialPill>
-        <SocialPill
-          href="mailto:madronalgonzalo06@gmail.com"
-        >
-          <MailIcon class="size-6" />
+        <SocialPill href="mailto:madronalgonzalo06@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
            madronalgonzalo06@gmail.com
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-2xl text-yellow-200 font-semibold mb-6 flex gap-x-2 items-center"
+      >
+        <LevelUpIcon class="size-[26px]" />
+         Experiencia de aprendizaje
+      </h2>
+      <Learning />
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-2xl text-yellow-200 font-semibold mb-6 flex gap-x-2 items-center"
+      >
+        <CodeIcon class="size-[26px]" />
+         Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
   </main>
 </Layout>

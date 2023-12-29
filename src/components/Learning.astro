@@ -1,0 +1,51 @@
+---
+import LearningItem from "./LearningItem.astro";
+const EXPERIENCE = [
+  {
+    date: 'Noviembre de 2021',
+    title: 'Empezando...',
+    description: 
+      'Comencé a mirar videos y cursos sobre programación web en donde aprendí que debía empezar a aprender HTML, y eso hice. En este lenguaje de marcado de hipertexto tengo un conocimiento a día de hoy muy bien establecido.'
+  },
+  {
+    date: 'Noviembre de 2021',
+    title: 'Estilizando Webs',
+    description: 
+      'Una vez aprendido bien lo básico y las funcionalidades de HTML, continué con CSS. El cual fué más trabajoso que HTML debido a su gran cantidad de gama de posibilidades que brinda esta hoja de estilos. Aprendí las cosas basicas e intermedias, tales como Flex-box, grids, navs, etc, y a dia de hoy continúo aprendiendo (como en todos los lenguajes).'
+  },
+  {
+    date: 'Diciembre de 2021',
+    title: 'Aprendiendo JavaScript',
+    description:
+      'En este mes comencé a mirar muchos cursos y videos sobre JavaScript, el primer lenguaje de programación que aprendí. A día de hoy sigo mejorando y puliendo mis habilidades con este lenguaje con cursos, videos, foros y diferentes páginas tales como LeetCode o HackerRank.'
+  },
+  {
+    date: 'Febrero de 2022',
+    title: 'Tailwind CSS',
+    description:
+      'Una vez que me sentí cómodo utilizando JavaScript en mis pequeños proyectos, comencé a aprender Tailwind para optimizar el tiempo de produccion en los mismos. Este framework de CSS me gusta mucho pero aún me cuesta usarlo, por lo que continuamente visito su documentación.'
+  },
+  {
+    date: 'Marzo de 2022',
+    title: 'GitHub',
+    description:
+      ''
+  },
+  {
+    date: 'Junio de 2022',
+    title: 'React',
+    description:
+      'Comencé a aprender sobre esta libreria de JavaScript que me facilitaria la creación y reutilización de componentes en mis páginas web. Todavía creo que me falta un gran y largo camino por recorrer.'
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {
+    EXPERIENCE.map(experience => (
+      <li class="mb-10 ms-4">
+        <LearningItem {...experience} />  
+      </li>
+    ))
+  }
+</ol>
