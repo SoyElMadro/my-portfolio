@@ -1,23 +1,97 @@
 ---
+import HTMLIcon from "./icons/HTML.astro";
+import CSSIcon from "./icons/CSS.astro";
+import JSIcon from "./icons/JS.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import TailwindIcon from "./icons/Tailwind.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML5",
+    class: "bg-orange-500 text-white",
+    icon: HTMLIcon,
+  },
+  CSS: {
+    name: "CSS3",
+    class: "bg-blue-500 text-white",
+    icon: CSSIcon,
+  },
+  JS: {
+    name: "JavaScript",
+    class: "bg-yellow-500 text-black",
+    icon: JSIcon,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-white text-[#73bcf6] font-bold",
+    icon: TailwindIcon,
+  },
+};
+
 const PROJECTS = [
   {
-    title: "Project 1",
+    title: "Portfolio",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam",
-    link: '',
-    github: '#',
-    image: '',
-    tags: ['HTML', 'CSS', 'JavaScript']
+    link: "",
+    github: "#",
+    image: "/src/images/52shots_so.png",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
   },
   {
-    title: "Project 2",
+    title: "Aprende Git",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam",
-    link: '',
-    github: '#',
-    image: '',
-    tags: ['HTML', 'CSS', 'JavaScript']
+    link: "https://comandos-de-git-basicos.netlify.app/",
+    github: "https://github.com/SoyElMadro/aprendiendo-git",
+    image: "/src/images/125shots_so.png",
+    tags: [TAGS.HTML, TAGS.CSS],
   },
+  {
+    title: 'Clon Abstract Helpcenter Page',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam',
+    link: 'https://comforting-tanuki-4c8811.netlify.app/',
+    github: 'https://github.com/SoyElMadro/clon-abstract-helpcenter',
+    image: '/src/images/843shots_so.png',
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS]
+  }
 ];
 ---
-# continuar desde acá
+
+{
+  PROJECTS.map(({ title, description, image, tags, link, github }) => (
+    <article class="mb-16">
+      <h3 class="text-[27px] font-semibold text-yellow-300 mb-2">{title}</h3>{" "}
+      <span class="flex rounded-full text-sm py-1 px-2 bg-black/65 w-max mb-3 transition hover:bg-white hover:text-black hover:font-semibold">
+        <a href={github} target="_blank" rel="noopener noreferrer">
+          Ver en GitHub
+        </a>
+      </span>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2 select-none">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <img
+          class="rounded shadow-2xl shadow-white/30"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+      </a>
+    </article>
+  ))
+}

@@ -6,10 +6,10 @@ import SocialPill from "../components/SocialPill.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
-import Learning from "../components/Learning.astro";
-import LevelUpIcon from "../components/icons/LevelUp.astro";
+import LanguagesIcon from "../components/icons/Languages.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import Tooling from "../components/Tooling.astro";
 ---
 
 <Layout
@@ -22,7 +22,7 @@ import Projects from "../components/Projects.astro";
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
         Hey, soy Madro <a
-          href="https://www.linkedin.com/in/gonzalo-madro%C3%B1al-136312269/"
+          href="https://www.linkedin.com/in/gonzalo-fabi%C3%A1n-madro%C3%B1al-136312269/"
           target="_blank"
           rel="noopener"
           class="flex justify-center items-center"
@@ -30,17 +30,17 @@ import Projects from "../components/Projects.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
         <span>+2 años de aprendizaje.</span>
         <span class="text-yellow-200/90"
           >Desarrollador web y Desarrollador Java</span
         >. <span class="text-sky-300">De Buenos Aires, Argentina</span> 🇦🇷. <span
-          class="opacity-75"
+          class="opacity-80"
           >Apasionado por crear aplicaciones que marquen la diferencia.</span
         >
       </h2>
 
-      <nav class="flex gap-4 mt-8 flex-wrap">
+      <nav class="flex gap-4 mt-8 flex-wrap opacity-70">
         <SocialPill
           href="https://www.linkedin.com/in/gonzalo-madro%C3%B1al-136312269/"
         >
@@ -58,21 +58,21 @@ import Projects from "../components/Projects.astro";
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="experiencia">
+    <SectionContainer id="lenguajes">
       <h2
-        class="text-2xl text-yellow-200 font-semibold mb-6 flex gap-x-2 items-center"
+        class="text-3xl text-gray-200 font-semibold mb-6 flex gap-x-2 items-center"
       >
-        <LevelUpIcon class="size-[26px]" />
-         Experiencia de aprendizaje
+        <LanguagesIcon class="size-8" />
+         Tooling
       </h2>
-      <Learning />
+      <Tooling />
     </SectionContainer>
 
-    <SectionContainer id="experiencia">
+    <SectionContainer id="proyectos">
       <h2
-        class="text-2xl text-yellow-200 font-semibold mb-6 flex gap-x-2 items-center"
+        class="text-3xl text-gray-200 font-semibold mb-6 flex gap-x-2 items-center"
       >
-        <CodeIcon class="size-[26px]" />
+        <CodeIcon class="size-8" />
          Proyectos
       </h2>
       <Projects />
