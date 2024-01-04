@@ -4,7 +4,7 @@ import CSSIcon from "./icons/CSS.astro";
 import JSIcon from "./icons/JS.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import TailwindIcon from "./icons/Tailwind.astro";
-import GitHubIcon from "./icons/GitHub.astro";
+import SeeOnGithub from "./SeeOnGithub.astro";
 
 const TAGS = {
   HTML: {
@@ -45,15 +45,6 @@ const PROJECTS = [
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
   },
   {
-    title: "Aprendiendo Git",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam",
-    link: "https://comandos-de-git-basicos.netlify.app/",
-    github: "https://github.com/SoyElMadro/aprendiendo-git",
-    image: "/projects/aprendiendogit.png",
-    tags: [TAGS.HTML, TAGS.CSS],
-  },
-  {
     title: "Clon Tesla Landing Page",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam",
@@ -71,6 +62,15 @@ const PROJECTS = [
     image: "/projects/abstracthelpcenter.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
   },
+  {
+    title: "Aprendiendo Git",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam",
+    link: "https://comandos-de-git-basicos.netlify.app/",
+    github: "https://github.com/SoyElMadro/aprendiendo-git",
+    image: "/projects/aprendiendogit.png",
+    tags: [TAGS.HTML, TAGS.CSS],
+  },
 ];
 ---
 
@@ -78,12 +78,8 @@ const PROJECTS = [
   PROJECTS.map(({ title, description, image, tags, link, github }) => (
     <article class="mb-16">
       <h3 class="text-[27px] font-semibold text-yellow-300 mb-2">{title}</h3>{" "}
-      <span class="flex rounded-full text-sm py-1 px-2 bg-black/65 w-max mb-3 transition hover:bg-white hover:text-black hover:font-semibold">
-        <a class="flex" href={github} target="_blank" rel="noopener noreferrer">
-          Ver en <GitHubIcon class="size-5 ml-2" />
-        </a>
-      </span>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <SeeOnGithub github={github} />
+      <p class="text-lg mb-4 text-pretty text-white/80">{description}</p>
       <ul class="flex gap-x-2 flex-row mb-2 select-none">
         {tags.map((tag) => (
           <li>

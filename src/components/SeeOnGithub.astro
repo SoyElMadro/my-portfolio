@@ -1,0 +1,16 @@
+---
+import GitHubIcon from "./icons/GitHub.astro";
+---
+
+<span
+  class="flex rounded-full text-sm py-1 px-2 dark:bg-black/80 dark:hover:bg-white bg-white w-max mb-3 transition hover:bg-black/80"
+>
+  <a
+    class="flex dark:text-white dark:hover:text-black dark:font-normal dark:hover:font-semibold hover:text-white text-black font-semibold hover:font-normal"
+    href={Astro.props.github}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Ver en <GitHubIcon class="size-5 ml-2" />
+  </a>
+</span>
