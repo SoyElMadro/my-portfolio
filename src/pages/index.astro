@@ -10,6 +10,8 @@ import LanguagesIcon from "../components/icons/Languages.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
 import Tooling from "../components/Tooling.astro";
+import AboutIcon from "../components/icons/About.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout
@@ -21,7 +23,7 @@ import Tooling from "../components/Tooling.astro";
       <h1
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
-        Hey, soy Madro <a
+        Hey, soy Madro. 👋<a
           href="https://www.linkedin.com/in/gonzalo-fabi%C3%A1n-madro%C3%B1al-136312269/"
           target="_blank"
           rel="noopener"
@@ -45,15 +47,15 @@ import Tooling from "../components/Tooling.astro";
           href="https://www.linkedin.com/in/gonzalo-madro%C3%B1al-136312269/"
         >
           <LinkedInIcon class="size-4 md:size-6" />
-           LinkedIn
+          LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/SoyElMadro">
           <GitHubIcon class="size-4 md:size-6" />
-           GitHub
+          GitHub
         </SocialPill>
         <SocialPill href="mailto:madronalgonzalo06@gmail.com">
           <MailIcon class="size-4 md:size-6" />
-           madronalgonzalo06@gmail.com
+          madronalgonzalo06@gmail.com
         </SocialPill>
       </nav>
     </SectionContainer>
@@ -63,7 +65,7 @@ import Tooling from "../components/Tooling.astro";
         class="text-3xl text-gray-200 font-semibold mb-6 flex gap-x-2 items-center"
       >
         <LanguagesIcon class="size-8" />
-         Tooling
+        My Toolkit
       </h2>
       <Tooling />
     </SectionContainer>
@@ -73,9 +75,18 @@ import Tooling from "../components/Tooling.astro";
         class="text-3xl text-gray-200 font-semibold mb-6 flex gap-x-2 items-center"
       >
         <CodeIcon class="size-8" />
-         Proyectos
+        Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="text-3xl text-gray-200 font-semibold mb-6 flex gap-x-2 items-center"
+      >
+        <AboutIcon class="size-8" />
+        Sobre mi
+      </h2>
+      <About />
     </SectionContainer>
   </main>
 </Layout>
