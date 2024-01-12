@@ -59,6 +59,16 @@ import About from "../components/About.astro";
       </nav>
     </SectionContainer>
 
+    <SectionContainer id="proyectos">
+      <h2
+        class="text-3xl text-gray-200 font-semibold mb-6 flex gap-x-2 items-center"
+      >
+        <CodeIcon class="size-8" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
     <SectionContainer id="lenguajes">
       <h2
         class="text-3xl text-gray-200 font-semibold mb-6 flex gap-x-2 items-center"
@@ -69,15 +79,6 @@ import About from "../components/About.astro";
       <Tooling />
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <h2
-        class="text-3xl text-gray-200 font-semibold mb-6 flex gap-x-2 items-center"
-      >
-        <CodeIcon class="size-8" />
-        Proyectos
-      </h2>
-      <Projects />
-    </SectionContainer>
     <About />
   </main>
 </Layout>
