@@ -5,6 +5,7 @@ import JSIcon from "./icons/JS.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import TailwindIcon from "./icons/Tailwind.astro";
 import SeeOnGithub from "./SeeOnGithub.astro";
+import ViteIcon from "./icons/Vite.astro";
 
 const TAGS = {
   HTML: {
@@ -31,6 +32,11 @@ const TAGS = {
     name: "Tailwind CSS",
     class: "bg-white text-[#73bcf6] font-bold",
     icon: TailwindIcon,
+  },
+  VITE: {
+    name: "Vite.js",
+    class: "bg-white text-sky-500 font-bold",
+    icon: ViteIcon,
   },
 };
 
@@ -60,54 +66,56 @@ const PROJECTS = [
     link: "https://inspiring-malasada-462d03.netlify.app/",
     github: "https://github.com/SoyElMadro/Clon-Ableton-Landing-Page",
     image: "/projects/ableton-landing.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS]
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
   },
   {
-    title: "Aprendiendo Git",
+    title: "Typing Game",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam",
-    link: "https://comandos-de-git-basicos.netlify.app/",
-    github: "https://github.com/SoyElMadro/aprendiendo-git",
-    image: "/projects/aprendiendogit.png",
-    tags: [TAGS.HTML, TAGS.CSS],
+    link: "https://65a429e9e7ac41aa2ac30bca--chimerical-quokka-ccd05e.netlify.app/",
+    github: "https://github.com/SoyElMadro/typing-game",
+    image: "/projects/typing-game.webp",
+    tags: [TAGS.VITE, TAGS.JS],
   },
   {
     title: "Generador de contraseñas seguras",
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam',
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam",
     link: "https://darling-sawine-61aa4f.netlify.app/",
     github: "https://github.com/SoyElMadro/generador-de-contrasenas-seguras",
     image: "/projects/contraseñasseguras.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS]
-  }
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
+  },
 ];
 ---
 
-{
-  PROJECTS.map(({ title, description, image, tags, link, github }) => (
-    <article class="mb-16">
-      <h3 class="text-[27px] font-semibold text-yellow-300 mb-2">{title}</h3>{" "}
-      <SeeOnGithub github={github} />
-      <p class="text-lg mb-4 text-pretty text-white/80">{description}</p>
-      <ul class="flex gap-x-2 flex-row mb-2 select-none">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
-            >
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <img
-          class="rounded shadow-2xl shadow-white/30"
-          src={image}
-          alt={`Captura de pantalla del proyecto ${image}`}
-        />
-      </a>
-    </article>
-  ))
-}
+<div class="flex flex-wrap gap-x-24">
+  {
+    PROJECTS.map(({ title, description, image, tags, link, github }) => (
+      <article class="mb-16">
+        <h3 class="text-[27px] font-semibold text-yellow-300 mb-2">{title}</h3>{" "}
+        <SeeOnGithub github={github} />
+        <p class="text-lg mb-4 text-pretty text-white/80">{description}</p>
+        <ul class="flex gap-x-2 flex-row mb-2 select-none">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <img
+            class="rounded shadow-2xl shadow-white/30"
+            src={image}
+            alt={`Captura de pantalla del proyecto ${image}`}
+          />
+        </a>
+      </article>
+    ))
+  }
+</div>
