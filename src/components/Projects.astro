@@ -6,6 +6,7 @@ import AstroIcon from "./icons/AstroIcon.astro";
 import TailwindIcon from "./icons/Tailwind.astro";
 import SeeOnGithub from "./SeeOnGithub.astro";
 import ViteIcon from "./icons/Vite.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
 
 const TAGS = {
   HTML: {
@@ -38,6 +39,11 @@ const TAGS = {
     class: "bg-white text-sky-500 font-bold",
     icon: ViteIcon,
   },
+  REACT: {
+    name: "React",
+    class: "bg-gray-800 text-sky-300",
+    icon: ReactIcon,
+  }
 };
 
 const PROJECTS = [
@@ -58,6 +64,15 @@ const PROJECTS = [
     github: "https://github.com/SoyElMadro/clon-abstract-helpcenter",
     image: "/projects/abstracthelpcenter.png",
     tags: [TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Lista de lectura - Prueba Técnica",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam",
+    link: "https://fastidious-llama-cfc658.netlify.app/",
+    github: "https://github.com/SoyElMadro/reading-list-app",
+    image: "/projects/reading-list.webp",
+    tags: [TAGS.REACT, TAGS.VITE],
   },
   {
     title: "Clon Ableton Landing Page",
