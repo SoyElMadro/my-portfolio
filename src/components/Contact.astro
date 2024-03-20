@@ -1,0 +1,65 @@
+---
+import Mail from "./icons/Mail.astro";
+import Phone from "./icons/Phone.astro";
+import Location from "./icons/Location.astro";
+import InfoItemContacto from "./InfoItemContacto.astro";
+import ItemContacto from "./ItemContacto.astro";
+---
+
+<section id="contacto" class="flex py-5 w-full xl:w-[1100px] mx-auto px-5">
+  <aside class="flex flex-col">
+    <h2 class="text-lg mb-8">INFO DE CONTACTO</h2>
+    <InfoItemContacto title="MAIL" text="madronalgonzalo06@gmail.com">
+      <Mail class="size-11" />
+    </InfoItemContacto>
+    <InfoItemContacto title="TELÉFONO" text="+54 11-5637-1489">
+      <Phone class="size-11" />
+    </InfoItemContacto>
+    <InfoItemContacto title="UBICACIÓN" text="Merlo Buenos Aires, Argentina">
+      <Location class="size-11" />
+    </InfoItemContacto>
+  </aside>
+
+  <main
+    class="flex flex-col ml-8 bg-zinc-900/80 p-6 w-full rounded-xl h-[600px]"
+  >
+    <h2 class="text-4xl mb-8">
+      Trabajemos <span class="text-yellow-400">juntos.</span>
+    </h2>
+    <form class="grid grid-cols-2 grid-rows-4 gap-x-6 h-full w-full">
+      <ItemContacto
+        id="nombre"
+        label="Nombre"
+        placeholder="Escribe tu nombre"
+      />
+      <ItemContacto
+        id="apellido"
+        label="Apellido"
+        placeholder="Escribe tu apellido"
+      />
+      <ItemContacto
+        id="correo"
+        label="Correo electrónico"
+        placeholder="Ingresa un correo"
+      />
+      <ItemContacto
+        id="asunto"
+        label="Asunto"
+        placeholder="¿Cómo puedo ayudarte?"
+      />
+      <ItemContacto isTextArea={true}>
+        <div class="flex flex-col w-full h-full col-span-full">
+          <label class="mb-1" for="comentarios">Comentarios / Preguntas</label>
+          <textarea
+            class="h-[130px] p-2 resize-none rounded-md"
+            id="comentarios"
+            placeholder="Comentarios"></textarea>
+        </div>
+      </ItemContacto>
+      <button
+        class="block col-span-full bg-sky-700 w-fit h-fit rounded-md p-2 text-lg mt-6 justify-self-end hover:bg-yellow-400 hover:text-black transition-colors duration-500 active:underline"
+        type="submit">Enviar mensaje</button
+      >
+    </form>
+  </main>
+</section>

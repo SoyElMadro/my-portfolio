@@ -1,7 +1,20 @@
-<footer class="bg-sky-900 text-white rounded-lg py-4 px-4 mb-6 mx-auto w-full xl:w-[1120px] shadow-lg backdrop-blur-lg">
-  <div class="text-sm container mx-auto flex justify-between items-center flex-wrap">
-    <p class="text-yellow-300">&copy; SoyMadro 2023. La mayoría de los derechos están protegidos</p>
-    <div class="space-x-6 text-white dark:text-gray-300 max-sm:mt-2 max-sm:m-auto">
+---
+const date = new Date();
+---
+
+<footer
+  class="bg-sky-900 text-white rounded-lg py-4 px-4 mb-6 mx-auto w-full xl:w-[1120px] shadow-lg backdrop-blur-lg"
+>
+  <div
+    class="text-sm container mx-auto flex justify-between items-center flex-wrap"
+  >
+    <p>
+      <span class="text-sky-300">&copy; SoyMadro {date.getFullYear()}.</span> La
+      mayoría de los derechos están protegidos
+    </p>
+    <div
+      class="space-x-6 text-white dark:text-gray-300 max-sm:mt-2 max-sm:m-auto"
+    >
       <a href="#sobre-mi" class="font-semibold hover:underline">Sobre mí</a>
       <a href="#contacto" class="font-semibold hover:underline">Contacto</a>
     </div>

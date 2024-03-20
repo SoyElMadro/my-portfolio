@@ -5,12 +5,13 @@ import Badge from "../components/Badge.astro";
 import SocialPill from "../components/SocialPill.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
-import MailIcon from "../components/icons/Mail.astro";
+import MailIcon from "../components/icons/Mailto.astro";
 import LanguagesIcon from "../components/icons/Languages.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
 import Tooling from "../components/Tooling.astro";
 import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout
@@ -18,11 +19,12 @@ import About from "../components/About.astro";
   description="Soy Madro, un Programador y Desarrollador Web. Explora mi Portfolio para descubrir proyectos web que destacan por su creatividad y funcionalidad. ¡Trabajemos juntos para llevar tu visión digital al siguiente nivel!"
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-20">
+    <SectionContainer class="pb-20 py-64">
       <h1
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
-        Hey, soy Madro. 👋<a
+        Hey, soy Madro. 👋
+        <a
           href="https://www.linkedin.com/in/gonzalo-fabi%C3%A1n-madro%C3%B1al-136312269/"
           target="_blank"
           rel="noopener"
@@ -33,10 +35,9 @@ import About from "../components/About.astro";
       </h1>
       <h2 class="text-xl lg:text-2xl text-white text-wrap max-w-[700px]">
         <span>+2 años de aprendizaje.</span>
-        <span class="text-yellow-200/90"
-          >Desarrollador y programador Web</span
-        >. <span class="text-sky-300">De Buenos Aires, Argentina</span> 🇦🇷. <span
-          class="opacity-80"
+        <span class="text-yellow-200/90">Desarrollador y programador Web</span>. <span
+          class="text-sky-300">De Buenos Aires, Argentina</span
+        > 🇦🇷. <span class="opacity-80"
           >Apasionado por crear aplicaciones que marquen la diferencia.</span
         >
       </h2>
@@ -80,5 +81,7 @@ import About from "../components/About.astro";
     </SectionContainer>
 
     <About />
+
+    <Contact />
   </main>
 </Layout>
