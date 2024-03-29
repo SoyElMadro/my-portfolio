@@ -7,6 +7,7 @@ import TailwindIcon from "./icons/Tailwind.astro";
 import SeeOnGithub from "./SeeOnGithub.astro";
 import ViteIcon from "./icons/Vite.astro";
 import ReactIcon from "./icons/ReactIcon.astro";
+import NextJSIcon from "./icons/NextJSIcon.astro";
 
 const TAGS = {
   HTML: {
@@ -43,7 +44,12 @@ const TAGS = {
     name: "React",
     class: "bg-gray-800 text-sky-300",
     icon: ReactIcon,
-  }
+  },
+  NEXTJS: {
+    name: "Next.js",
+    class: "bg-black/80 text-white",
+    icon: NextJSIcon,
+  },
 };
 
 const PROJECTS = [
@@ -55,6 +61,15 @@ const PROJECTS = [
     github: "https://github.com/SoyElMadro/Landing-Page-de-Tesla",
     image: "/projects/teslalanding.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
+  },
+  {
+    title: "Expenses Tracker",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euiasmod, aliquam",
+    link: "https://expenses-tracker-chi-gray.vercel.app/",
+    github: "https://github.com/SoyElMadro/expenses-tracker",
+    image: "/projects/expenses-tracker.webp",
+    tags: [TAGS.NEXTJS, TAGS.TAILWIND],
   },
   {
     title: "Lista de lectura - Prueba Técnica",
