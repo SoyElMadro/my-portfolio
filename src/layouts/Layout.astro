@@ -16,14 +16,14 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body class="relative">
     <div
-      class="absolute inset-0 -z-10 size-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#012_40%,#3ae_100%)]"
+      class="absolute inset-0 -z-10 flex items-center justify-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#012_40%,#3ae_100%)]"
     >
     </div>
     <Header />
@@ -46,6 +46,14 @@ const { title, description } = Astro.props;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+
+  body,
+  header,
+  footer,
+  slot {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   @media (prefers-reduced-motion: reduce) {
